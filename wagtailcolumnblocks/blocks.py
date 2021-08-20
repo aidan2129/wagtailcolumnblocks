@@ -65,7 +65,6 @@ class ColumnsBlock(blocks.StructBlock):
     :param ratios: the ratios of each columns relative to each other
     :param **kwargs: additional block configuration
     """
-    is_full_width = blocks.BooleanBlock(required=False)
     def __init__(self, childblocks, ratios=(1, 1), **kwargs):
         super().__init__([
             ('column_%i' % index, childblocks())
